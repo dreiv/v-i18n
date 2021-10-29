@@ -1,5 +1,6 @@
 <template>
   <h1>{{ t("message") }}</h1>
+  <p>test</p>
 </template>
 
 <script lang="ts">
