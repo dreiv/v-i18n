@@ -1,4 +1,6 @@
 module.exports = {
+  publicPath: process.env.NODE_ENV === "production" ? "/v-i18n/" : "/",
+  lintOnSave: true,
   pluginOptions: {
     i18n: {
       locale: "en",
