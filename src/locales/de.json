@@ -1,4 +1,7 @@
 {
   "message": "hallo i18n !!",
-  "paragraph": "etwas etwas :D"
+  "paragraph": "etwas etwas :D",
+  "the": {
+    "end": "That's all!"
+  }
 }
