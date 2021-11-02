@@ -1,6 +1,9 @@
 {
   "message": "hallo i18n !!",
   "paragraph": "etwas etwas 🤪",
+  "line": {
+    "weather": "Weather is wonderfull"
+  },
   "the": {
     "end": "Das ist alles!"
   }
