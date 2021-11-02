@@ -1,10 +1,14 @@
 {
-  "message": "hallo i18n !!",
-  "paragraph": "etwas etwas 🤪",
-  "line": {
-    "weather": "Das Wetter ist wunderbar"
+  "appName": {
+    "message": "string 1",
+    "description": "Some context"
   },
-  "the": {
-    "end": "Das ist alles!"
+  "extName": {
+    "message": "string 2",
+    "description": "Another context"
+  },
+  "extDesc": {
+    "message": "string 3",
+    "description": "some other context"
   }
 }
