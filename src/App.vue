@@ -1,6 +1,7 @@
 <template>
   <h1>{{ t("message") }}</h1>
   <p>{{ t("paragraph") }}</p>
+  <p>{{ t("line.weather") }}</p>
   <p>{{ t("the.end") }}</p>
 </template>
 
