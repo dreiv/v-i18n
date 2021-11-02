@@ -1,6 +1,9 @@
 {
   "message": "salut i18n !!",
   "paragraph": "ceva ceva :D",
+  "line": {
+    "weather": "Vremea este minunată"
+  },
   "the": {
     "end": "Asta e tot!"
   }
