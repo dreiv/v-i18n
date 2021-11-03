@@ -1,14 +1,10 @@
 {
-  "appName": {
-    "message": "string 1",
-    "description": "Some context"
+  "message": "hello i18n !!",
+  "paragraph": "something something :D",
+  "line": {
+    "weather": "Weather is wonderfull"
   },
-  "extName": {
-    "message": "string 2",
-    "description": "Another context"
-  },
-  "extDesc": {
-    "message": "string 3",
-    "description": "some other context"
+  "the": {
+    "end": "That's all!"
   }
 }
