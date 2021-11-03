@@ -1,10 +1,10 @@
 {
-  "message": "salut i18n !!",
-  "paragraph": "ceva ceva :D",
+  "message": "hello i18n !!",
+  "paragraph": "something something :D",
   "line": {
-    "weather": "Vremea este minunată"
+    "weather": "Weather is wonderfull"
   },
   "the": {
-    "end": "Asta e tot!"
+    "end": "That's all!"
   }
 }
