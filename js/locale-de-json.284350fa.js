@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["locale-de-json"],{"6ce2":function(e,n,o){"use strict";o.r(n),n["default"]={message:e=>{const{normalize:n}=e;return n(["hello i18n !!"])},paragraph:e=>{const{normalize:n}=e;return n(["something something :D"])},line:{weather:e=>{const{normalize:n}=e;return n(["Weather is wonderfull"])}},the:{end:e=>{const{normalize:n}=e;return n(["That's all!"])}}}}}]);
+//# sourceMappingURL=locale-de-json.284350fa.js.map
