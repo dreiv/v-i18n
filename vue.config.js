@@ -12,4 +12,7 @@ module.exports = {
       fullInstall: true,
     },
   },
+  chainWebpack: (config) => {
+    config.plugins.delete("prefetch");
+  },
 };

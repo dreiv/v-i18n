@@ -2,41 +2,32 @@ import { nextTick } from "vue";
 import { createI18n } from "vue-i18n";
 import en from "@/locales/en.json";
 
-export const SUPPORT_LOCALES = ["en", "de", "ro", "zu"];
+const i18n: any = createI18n({ locale: "en", messages: { en } });
+loadLocaleMessages("ro");
 
-export function setupI18n(options = { locale: "en", messages: { en } }) {
-  const i18n = createI18n(options);
-  setI18nLanguage(i18n, options.locale);
-  return i18n;
-}
-
-export function setI18nLanguage(i18n: any, locale: any) {
-  if (i18n.mode === "legacy") {
-    i18n.global.locale = locale;
-  } else {
-    i18n.global.locale.value = locale;
+export async function loadLocaleMessages(locale: string) {
+  if (i18n.locale === locale) {
+    return Promise.resolve(locale);
   }
-  /**
-   * NOTE:
-   * If you need to specify the language setting for headers, such as the `fetch` API, set it here.
-   * The following is an example for axios.
-   *
-   * axios.defaults.headers.common['Accept-Language'] = locale
-   */
-  document && document.querySelector("html")!.setAttribute("lang", locale);
-  // loadLocaleMessages(i18n, "ro");
-}
 
-export async function loadLocaleMessages(i18n: any, locale = "en") {
+  if (locale === "zu") {
+    (window as any)._jipt = [["project", "v-i18n"]];
+    const i18nEditor = document.createElement("script");
+    i18nEditor.setAttribute("src", "//cdn.crowdin.com/jipt/jipt.js");
+    document.head.appendChild(i18nEditor);
+  }
+
   // load locale messages with dynamic import
   const messages = await import(
-    /* webpackChunkName: "locale-[request]" */ `./locales/${locale}.json`
+    /* webpackChunkName: "locale-[request]" */
+    `./locales/${locale}.json`
   );
 
   // set locale and locale message
   i18n.global.setLocaleMessage(locale, messages.default);
+  i18n.global.locale = locale;
 
   return nextTick();
 }
 
-export default setupI18n();
+export default i18n;
